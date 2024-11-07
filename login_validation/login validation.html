@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Css/login_validation.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <center style="margin-bottom: 20px;">
+                <h1>Welcome!</h1>
+            </center>
+            <div class="input-group">
+                <input id="username" class="username" placeholder="example@email.com" type="username" required />
+                <label>Username</label>
+                <span id="username_validate"></span>
+            </div>
+            <div class="input-group">
+                <input id="password" class="password" placeholder="123456" type="password" required />
+                <label>Password</label>
+                <span id="password_validate"></span>
+            </div>
+            <div style="position: relative; width: 100%;" class="btn-c">
+                <button id="loginBtn">Login</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        var input = document.querySelectorAll("input");
+        var loginBtn = document.getElementById("loginBtn");
+        var password = document.getElementById("password");
+        var username = document.getElementById("username");
+        var username_validate = document.getElementById("username_validate");
+        var password_validate = document.getElementById("password_validate");
+        loginBtn.addEventListener("mousemove", (event) => {
+            input.forEach((i) => {
+                if (i.value === '') {
+                    username_validate.innerHTML = 'Username Not Be Empty';
+                    password_validate.innerHTML = 'Password Not Be Empty';
+                    loginBtn.style.position = `absolute`;
+                    loginBtn.style.top = `${Math.floor(Math.random() * 40)}px`;
+                    loginBtn.style.left = `${Math.floor(Math.random() * 300)}px`;
+
+
+                }else if(password.value.length < 8){
+                    password_validate.innerHTML = 'minimum 8 character';
+                    loginBtn.style.position = `absolute`;
+                    loginBtn.style.top = `${Math.floor(Math.random() * 40)}px`;
+                    loginBtn.style.left = `${Math.floor(Math.random() * 300)}px`;
+
+                }else{
+                    password_validate.innerHTML = ' ';
+                    loginBtn.style.backgroundColor = '#a3e635'
+
+                }
+
+                if (username.value !== '') {
+                    username_validate.innerHTML = '';
+                }
+            })
+        })
+
+    </script>
+</body>
+
+</html>

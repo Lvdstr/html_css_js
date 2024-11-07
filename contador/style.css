@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+    background-color: rgb(27, 14, 83);
+}
+
+@font-face {
+    font-family: digital_clock;
+    src: url(DS-DIGIT.TTF);
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(67, 67, 67);
+    border-radius: 3px;
+    height: 200px;
+    width: 600px;
+}
+
+#numero{
+    font-family: digital_clock;
+    margin: 10px;
+    background-color: rgb(36, 36, 36);
+    border-radius: 4px;
+    height: 130px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 120px;
+}
+
+button{
+    height: 60px;
+    width: 170px;
+    color: #fff;
+    background-color: rgb(255, 0, 0);
+    border: 0px;
+    border-radius: 3px;
+    font-size: 50px;
+    font-weight: bolder;
+}
+

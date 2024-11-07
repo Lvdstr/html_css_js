@@ -1,0 +1,6 @@
+:root{
+	--value: 189px;
+}
+button:hover{
+    transform: scale(1.1);
+}

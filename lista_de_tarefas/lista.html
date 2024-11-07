@@ -1,0 +1,41 @@
+<!DCOTYPE html>
+<html lang = "pt-br">
+<head>
+	<title> lista</title>
+	<meta  charset = "UTF-8">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel = "stylesheet" href = "bootstrap.min.css">
+	<link rel = "stylesheet" href = "estilos.css">
+</head>
+<body>
+	<div class = "container-fluid">
+		<div class = "row">
+		
+			<div class = "col-sm-4">
+				<img src = "ex9_1.jpg" alt = "tarefas" class = "imgProg"/>
+			</div>
+			
+			<div class = "col-sm-8" id = "divQuadro">
+				<h1>tarefas do dia (a realizar)</h1>
+				<p>
+					<label for = "intarefa">tarefa:</label>
+					<input type = "text" class = "form-control" id = "intarefa" autofocus>
+				</p>
+				<p>
+					<input type = "button" class = "btn btn-primary"
+							value = "adicionar &#10003;" id = "btadicionar">
+					<input type = "button" class = "btn btn-info"
+							value = "selecionar &#8645;" id = "btselecionar">
+					<input type = "button" class = "btn btn-danger"
+							value = "retirar selecionada &#10007;" id = "btretirar">
+					<input type = "button" class = "btn btn-success"
+							value = "gravar &#9673;" id = "btgravar">
+				</p>
+			</div>
+			
+		</div>
+	</div>
+	<script src = "ex9.js"></script>
+</body>
+</html>
